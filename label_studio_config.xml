@@ -1,0 +1,18 @@
+<View>
+  <Header value="Select disaster category:"/>
+  <Text name="text" value="$text"/>
+  <Choices name="label" toName="text" choice="single" showInline="true">
+    <Choice value="not_relevant" hint="General tweets that don't relate to disasters or emergencies"/>
+    <Choice value="auto_accident" hint="Car crashes, vehicle collisions, traffic accidents"/>
+    <Choice value="fire" hint="Fires, wildfires, building fires, structure fires, explosions"/>
+    <Choice value="flood" hint="Flooding, flash floods, water inundation"/>
+    <Choice value="earthquake" hint="Earthquakes, tremors, seismic activity"/>
+    <Choice value="severe_storm" hint="Severe thunderstorms, hail, lightning, windstorms"/>
+    <Choice value="shooting" hint="Mass shootings, gun violence, active shooter situations"/>
+    <Choice value="tornado" hint="Tornadoes, funnel clouds, twisters"/>
+    <Choice value="hurricane" hint="Hurricanes"/>
+    <Choice value="extreme_heat" hint="Heat waves, extreme temperatures, droughts"/>
+    <Choice value="tropical_storm" hint="Tropical storms, tropical cyclones, monsoons, typhoons"/>
+    <Choice value="other_disaster" hint="Other disasters like avalanches, landslides, volcanic eruptions, tsunamis"/>
+  </Choices>
+</View>

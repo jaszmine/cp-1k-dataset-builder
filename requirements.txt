@@ -1,0 +1,10 @@
+pandas>=2.2.3
+datasets>=2.10.0
+Django>=4.2.13
+appdirs>=1.4.3
+attrs>=19.2.0
+bleach>=5.0.0
+colorama>=0.4.4
+defusedxml>=0.7.1
+numpy>=1.26.4
+openai>=1.10.0

@@ -39,11 +39,13 @@ A one-command pipeline that:
 
 <br>
 
-## macOS (Apple-Silicon) quick start
+## macOS (Apple-Silicon) NEW PROJECT quick start
 
-This guide assumes **Python ≥3.9**, **Homebrew**, and **VS Code terminal**.
+You do NOT need to run this entire thing if you're just joining our organization to help label. Lol just message me and I'll send the link. <br>
+But if you're interested, or you want to try this out on a different dataset, have at it :)
 
-> Note: I'm running this in VS Code on a MacBook Air, chip: Apple M1, macOS: Ventura 13.1
+> Note: I'm running this in VS Code on a MacBook Air, chip: Apple M1, macOS: Ventura 13.1 <br>
+> This guide assumes **Python ≥3.9**, **Homebrew**, and **VS Code terminal**.
 
 <br>
 

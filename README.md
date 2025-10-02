@@ -12,14 +12,15 @@ A one-command pipeline that:
 | File | Purpose |
 |---|---|
 | `label_studio_import.json` | Drag-and-drop import into [Label Studio](https://labelstud.io) (text + pre-label) |
-| `pre_labeled_dataset.csv` | Plain CSV backup / inspection |
+| `pre_labeled_dataset.csv` | Plain CSV backup / inspection | <br>
+
 
 > Note: This was just a mini-project to simplify our lives for one part of a larger project my senior design capstone and I are working on. <br> <br>
 > All this does is generate a potential dataset with a LOW-ACCURACY predicted true_label. <br>
 > This is not our main codebase for the project, it just simplifies a smaller step we need to take to benchmark and fine-tune our LLMs. 
-
 <br>
-## (12) Category schema
+
+## 12-Category schema
 
 | Label | Description | Target count |
 |---|---|---|
@@ -36,16 +37,21 @@ A one-command pipeline that:
 | `tropical_storm` | Tropical storms, typhoons, monsoons | 20 |
 | `other_disaster` | Avalanche, landslide, volcano, tsunami, etc. … | 10 |
 
+<br>
 
 ## macOS (Apple-Silicon) quick start
 
 This guide assumes **Python ≥3.9**, **Homebrew**, and **VS Code terminal**.
 
-### 1. Clone / download this repo and open it in VS Code
+> Note: I'm running this in VS Code on a MacBook Air, chip: Apple M1, macOS: Ventura 13.1
+
+<br>
+
+### 1. Clone / download this repo and open it in your IDE
 
 ```bash
-cd your-folder
-code .
+git clone https://github.com/YOUR_USERNAME/cp-1k-dataset-builder.git
+cd cp-1k-dataset-builder
 ```
 
 ### 2. Create & activate a virtual environment (recommended)
@@ -55,7 +61,7 @@ source .venv/bin/activate
 ```
 
 ### 3. Install Python libraries
-I included a requirements.txt that pins every package the pipeline needs (pandas, datasets, Django, openai, etc.).
+You can check requirements.txt that pins every package the pipeline needs (pandas, datasets, Django, openai, etc.). \
 From the repo root in the VS Code terminal:
 ```bash
 pip3 install -r requirements.txt
@@ -83,12 +89,12 @@ python3 create_dataset.py
 # → pre_labeled_dataset.csv
 ```
 
-### 4. Ensure Homebrew is installed
+### 5. Ensure Homebrew is installed
 ```bash
 which brew
 ```
 
-### 5. Install Label Studio (full GUI)
+### 6. Install Label Studio (full GUI)
 Label Studio ships with a hard dependency (psycopg2-binary) that needs PostgreSQL headers on Apple-Silicon.
 Fix once:
 ```bash
@@ -117,13 +123,14 @@ which label-studio
 This should print something like: /Users/username/Library/Python/3.9/bin/label-studio \
 Now, every new terminal (inside or outside VS Code) will know where label-studio lives.
 
-### 6. Launch Label Studio
+### 7. Launch Label Studio
 ```bash
 label-studio
 ```
 
 Your browser opens http://localhost:8080. \
-Signin → Create a project → Import → upload label_studio_import.json → start reviewing / correcting the pre-labels.
+When creating a new project:
+Signin → Create a project → Import label_studio_import.json → start reviewing / correcting the pre-labels.
 
 ## Other platforms
 - Linux: sudo apt install libpq-dev then continue from step 5b.

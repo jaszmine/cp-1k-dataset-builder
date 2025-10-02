@@ -4,10 +4,11 @@ A one-command pipeline that:
 
 1. Downloads ~2 M Bluesky (Twitter-like) posts from Hugging-Face 
    1. Dataset: [alpindale/two-million-bluesky-posts](https://huggingface.co/datasets/alpindale/two-million-bluesky-posts)  
-2. Keeps only English posts, de-duplicates them  
-3. Auto-labels each post with a disaster-relevant category via keyword rules  
-4. Down-samples the pool to a pre-defined 1,000-row distribution  
-5. Exports two ready-to-use files:
+2. Keeps only English posts, de-duplicates them
+   1. Note: I only filtered for Roman Alphabet characters, so the ouput may include non-english prompts in the Latin script (e.g. Spanish). 
+4. Auto-labels each post with a disaster-relevant category via keyword rules  
+5. Down-samples the pool to a pre-defined 1,000-row distribution  
+6. Exports two ready-to-use files:
 
 | File | Purpose |
 |---|---|
